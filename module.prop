@@ -1,0 +1,6 @@
+id=lbm
+name=Loopback Mount (LBM)
+version=0.1
+versionCode=1
+author=giovannygb
+description=Systemless loopback image mounting from SD card into internal storage targets. Supports ext4/f2fs images with dynamic provisioning.
