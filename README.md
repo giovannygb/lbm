@@ -11,6 +11,8 @@ LBM is a Magisk module that mounts ext4 or f2fs filesystem images from a removab
 
 ## Tutorial
 
+> Commands below require a terminal app with root access (e.g. Termux).
+
 ### 1. Identify the target
 
 Find the app's data directory. Common prefixes:
@@ -54,8 +56,8 @@ Launch the app and confirm it works normally.
 3. Clear the app's storage and cache (Android Settings → Apps).
 4. Open the app — it should behave as a fresh install.
 5. Re-enable the LBM module in Magisk.
-6. Press the action button again to recreate and repopulate the image.
-7. Reboot and verify the app data is restored.
+6. Press the action button to remount the image and restore your data.
+7. Open the app and confirm data is restored.
 
 ## Configuration
 
