@@ -349,6 +349,20 @@ image_fs_resize() {
 }
 
 # =========================
+# SELINUX HELPERS
+# =========================
+
+restore_context() {
+    path="$1"
+    log "Restoring SELinux context on $path"
+    restorecon -RD "$path" || {
+        log "restorecon failed for $path"
+        return 1
+    }
+    return 0
+}
+
+# =========================
 # MOUNT HELPERS
 # =========================
 
@@ -401,11 +415,9 @@ image_bind() {
     mountpoint -q "$target" && return 0
 
     mount --bind "$src" "$target" || {
-        log "Bind mount failed: $src → $target"
+        log "Bind mount failed: $src -> $target"
         return 1
     }
-
-    restorecon -R "$target" 2>/dev/null
 
     return 0
 }

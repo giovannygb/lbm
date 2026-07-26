@@ -148,6 +148,8 @@ read_configs | while IFS= read -r cfg; do
         continue
     }
 
+    restore_context "$TARGET" || log "restore_context failed for $TARGET"
+
     log "Completed setup for $ID"
 done
 

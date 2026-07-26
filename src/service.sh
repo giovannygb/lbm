@@ -104,9 +104,6 @@ read_configs | while IFS= read -r cfg; do
         continue
     fi
 
-    # --- SELINUX CONTEXT FIX ---
-    restorecon -R "$TARGET" 2>/dev/null || true
-
     log "Mounted and bound $ID successfully"
 done
 
