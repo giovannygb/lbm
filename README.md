@@ -4,7 +4,7 @@ LBM is a Magisk module that mounts ext4 or f2fs filesystem images from a removab
 
 ## Quick Start
 
-1. Install the module in Magisk and reboot the device.
+1. Download the [latest release](https://github.com/giovannygb/lbm/releases/latest) and install it in Magisk, then reboot the device.
 2. Copy a sample `.conf` file from [configs/](configs/) to `/storage/XXXX-XXXX/lbm/configs/` on your SD card and adjust the fields for your target.
 3. Open Magisk, find LBM in the module list, and press the action button.
 4. Wait for image creation and data population to finish. Reboot.
